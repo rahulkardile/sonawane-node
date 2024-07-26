@@ -18,6 +18,13 @@ try {
 const PORT = process.env.PORT || 3300;
 
 app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: `server is at home route`
+    });
+});
+
+app.get("/input", (req, res) => {
     const data = req.body.data;
 
     res.status(200).json({
